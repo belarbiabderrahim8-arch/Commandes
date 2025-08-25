@@ -315,21 +315,18 @@
 
       // ✅ Envoyer à Google Sheets
       fetch("https://script.google.com/macros/s/AKfycbymnVkoZb482tgsz7UHc_Y7Y42MRuLYjJi_3r0iMbjDMYx5RlaFjbyc2ePzIa6AqxDo/exec", {
-  method: "POST",
-  mode: "no-cors",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(order)
-})
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(order)
       })
       .then(() => {
-        // Afficher le modal
         document.getElementById("confirmationText").innerHTML = confirmationText;
         document.getElementById("successModal").classList.remove("hidden");
         this.reset();
         otherProductGroup.classList.add("hidden");
       })
       .catch(err => {
-        // Même en cas d'erreur, montrez le message
         document.getElementById("confirmationText").innerHTML = confirmationText;
         document.getElementById("successModal").classList.remove("hidden");
         this.reset();
@@ -345,8 +342,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
