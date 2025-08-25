@@ -314,11 +314,12 @@
       `;
 
       // ✅ Envoyer à Google Sheets
-      fetch("https://script.google.com/macros/s/AKfycbz4yjxC8oGwza_rDV3ZqwPjGDY4EkqGxW3hderyhIDg1YG2zOfqEp5P4z8ufvlKmTmVzQ/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(order)
+      fetch("https://script.google.com/macros/s/AKfycbymnVkoZb482tgsz7UHc_Y7Y42MRuLYjJi_3r0iMbjDMYx5RlaFjbyc2ePzIa6AqxDo/exec", {
+  method: "POST",
+  mode: "no-cors",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(order)
+})
       })
       .then(() => {
         // Afficher le modal
@@ -344,6 +345,7 @@
   </script>
 </body>
 </html>
+
 
 
 
